@@ -49,5 +49,28 @@ const chart = [
       console.log(e.supplier + "\t\t\t" + e.plan + "\t\t" + vatTotal.toFixed(2));
     });
   }
-  
+
+
+  //let file = "C:\\Users\\yogit\\Downloads\\pairing.zip\\plans.json";
+  function readTextFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                alert(allText);
+            }
+        }
+    }
+    rawFile.send(null);
+}
+console.log(process.argv);
+var file = process.argv.slice(2);
+console.log(file[0]);
   console.log(Calculate(chart, 1000));
+  console.log(readTextFile(file[0]));
