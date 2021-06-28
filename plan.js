@@ -51,7 +51,7 @@ const chart = [
   }
 
 
-  //let file = "C:\\Users\\yogit\\Downloads\\pairing.zip\\plans.json";
+  
   function readTextFile(file)
 {
     var rawFile = new XMLHttpRequest();
